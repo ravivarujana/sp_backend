@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "Streaming platform backend",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon sec/index.js"
   },
   "keywords": [
+    "NodeJS",
+    "JavaScript",
     "Streaming",
-    "|",
     "watch",
-    "|",
     "online"
   ],
   "author": "Ravi Varujana",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
