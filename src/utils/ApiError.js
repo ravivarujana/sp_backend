@@ -13,6 +13,7 @@ class ApiError extends Error {
     this.success = false;
     this.errors = errors;
 
+    /* Need to learn more about the Error class and capture stack trace */
     if (stack) {
       this.stack = stack;
     } else {
