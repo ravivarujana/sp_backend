@@ -21,11 +21,11 @@
 //   }
 // };
 
-const asyncHandler = (requestHandler) => {
+const asyncHandler =
+  (requestHandler) =>
   // return new Promise
   (req, res, next) => {
     Promise.resolve(requestHandler(res, req, next)).catch((err) => next(err));
   };
-};
 
 export { asyncHandler };

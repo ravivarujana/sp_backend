@@ -11,10 +11,10 @@ dotenv.config({
 });
 // dotenv.config();
 
-// to handle the errors relateed to the mongodb connect
+/* To handle error after the initial connection has been established */
 
-mongoose.connect.on((err) => {
-  console.log(`Error while connecting to MongoDB ${err}`);
+mongoose.connection.on("error", (error) => {
+  console.log(`Listening to the error after the initial connection ${error}`);
 });
 
 // since the connect DB function is returning a promise
