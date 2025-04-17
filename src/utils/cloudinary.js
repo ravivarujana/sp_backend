@@ -17,6 +17,7 @@ async function uploadOnCloudinary(localFilePath) {
     //file has been uploaded on cloudinary
     console.log(uploadedFile);
 
+    fs.unlinkSync(localFilePath)
     return uploadedFile;
   } catch (err) {
     /* We want to unlink file if we face any error while uploading it, we would unlink it synchronously before performing any other operation  */
